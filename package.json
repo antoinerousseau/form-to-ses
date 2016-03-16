@@ -30,5 +30,8 @@
     "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "rollbar": "^0.5.16"
+  },
+  "engines": {
+    "node": ">=4.0"
   }
 }
