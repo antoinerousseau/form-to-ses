@@ -21,7 +21,7 @@ Then edit `config.json` to setup your app:
 
 * `region`: your Amazon SES account region
 * `access_key_id` and `secret_access_key`: your Amazon AWS credentials
-* `from`: the sender email address of the emails you will receive (it *must* be [verified](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html)). You can use the `[origin]` placeholder, which will be replaced by the hostname of your form.
+* `from`: the sender email address of the emails you will receive (it *must* be [verified](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-email-addresses.html)). You can use the `[origin]` placeholder, which will be replaced by the hostname of your form, or `[domain]` for the domain name (origin root).
 * `to`: your email address(es)
 * `default_subject`: used if your visitor did not provide a subject to their message (or if you did not provide a `subject` field)
 * `allowed_origins` (optional): hostnames allowed to post (no port)

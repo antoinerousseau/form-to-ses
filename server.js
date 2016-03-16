@@ -41,6 +41,7 @@ app.post('/send', (req, res) => {
   const host = (req.headers['x-forwarded-host'] || req.headers.host).split(':')[0]
   const allowed_origins = [host].concat(config.allowed_origins || [])
   const origin = url.parse(req.headers.origin).hostname
+  const domain = origin.split('.').slice(-2).join('.')
   const ip = req.headers['cf-connecting-ip'] || req.ip
 
   if (allowed_origins.indexOf(origin) === -1) {
@@ -60,7 +61,7 @@ app.post('/send', (req, res) => {
   }
 
   const message = {
-    from: config.from.replace('[origin]', origin),
+    from: config.from.replace('[origin]', origin).replace('[domain]', domain),
     replyTo: [body.name + ' <' + body.email + '>'],
     to: config.to,
     subject: subject,

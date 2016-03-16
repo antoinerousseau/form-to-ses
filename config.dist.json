@@ -2,7 +2,7 @@
   "region": "eu-west-1",
   "access_key_id": "xxxxxxxx",
   "secret_access_key": "xxxxxxxx",
-  "from": "Contact Form <mail@[origin]>",
+  "from": "Contact Form <mail@[domain]>",
   "to": ["you@gmail.com"],
   "default_subject": "Message from website"
 }
