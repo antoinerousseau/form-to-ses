@@ -14,7 +14,7 @@ try {
 
 const PORT = Number(process.argv[2]) || Number(process.env.PORT) || 3000
 
-const AmazonSES = require('amazon-ses')
+const AmazonSES = require('amazon-ses-mailer')
 const mailer = new AmazonSES(config.access_key_id, config.secret_access_key, config.region)
 
 const rollbar = require('./lib/rollbar')
